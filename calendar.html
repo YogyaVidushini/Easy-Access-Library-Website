@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar - Easy Access</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+ 
+<body>
+    <div class="menubar">
+        <h1>Easy Access</h1>
+        <a href="index.html" target="_parent">Home</a>
+        <a href="Books.html" target="_blank">Books</a>
+        <a href="ContactUs.html" target="_blank">Support</a>
+        <a href="payment.html" target="_blank">Payments</a>
+        <a href="calendar.html" target="_blank">My Calendar</a>
+        <a href="signup.html" class="signup-button" target="_blank">Sign Up</a>
+    </div>
+
+    <div class="calendar-container">
+        <div class="calendar-header">
+            <h2><i class="fas fa-calendar-alt"></i> Library Calendar</h2>
+            <p>Track your borrowed books and library events</p>
+        </div>
+
+        <div class="calendar-body">
+            <div class="calendar-sidebar">
+                <div class="book-status">
+                    <h3>My Borrowed Books</h3>
+                    <div class="status-item">
+                        <div>
+                            <div class="status-text">Harry Potter - Philosopher's Stone</div>
+                            <div class="status-date">Due: Aug 15, 2025</div>
+                        </div>
+                        <i class="fas fa-book" style="color: #4361ee;"></i>
+                    </div>
+                    <div class="status-item due-soon">
+                        <div>
+                            <div class="status-text">The Invisible Man</div>
+                            <div class="status-date">Due: Aug 5, 2025 (Due Soon!)</div>
+                        </div>
+                        <i class="fas fa-exclamation-triangle" style="color: #f59e0b;"></i>
+                    </div>
+                    <div class="status-item overdue">
+                        <div>
+                            <div class="status-text">Hamlet</div>
+                            <div class="status-date">Overdue: Aug 1, 2025</div>
+                        </div>
+                        <i class="fas fa-exclamation-circle" style="color: #ef4444;"></i>
+                    </div>
+                </div>
+
+                <div class="event-list">
+                    <h3>Library Events</h3>
+                    <div class="event-item">
+                        <h4>Book Return Due</h4>
+                        <p><span class="event-time">Aug 5, 2025</span> - The Invisible Man</p>
+                    </div>
+                    <div class="event-item">
+                        <h4>Book Club Meeting</h4>
+                        <p><span class="event-time">Aug 8, 2025 - 6:00 PM</span> - Fiction Discussion</p>
+                    </div>
+                    <div class="event-item">
+                        <h4>New Books Arrival</h4>
+                        <p><span class="event-time">Aug 10, 2025</span> - Latest Fiction Collection</p>
+                    </div>
+                    <div class="event-item">
+                        <h4>Library Workshop</h4>
+                        <p><span class="event-time">Aug 12, 2025 - 2:00 PM</span> - Digital Research Skills</p>
+                    </div>
+                </div>
+
+                <div class="add-event-section">
+                    <h3>Add Personal Reminder</h3>
+                    <form id="eventForm">
+                        <div class="form-group">
+                            <label for="eventTitle">Reminder Title</label>
+                            <input type="text" id="eventTitle" class="form-control" placeholder="e.g., Return book"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventDate">Date</label>
+                            <input type="date" id="eventDate" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="eventTime">Time (optional)</label>
+                            <input type="time" id="eventTime" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="eventDescription">Notes</label>
+                            <textarea id="eventDescription" class="form-control" rows="2"
+                                placeholder="Additional notes..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-plus"></i> Add Reminder
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="calendar-main">
+                <div class="calendar-nav">
+                    <button id="prevMonth"><i class="fas fa-chevron-left"></i></button>
+                    <div class="month-year" id="monthYear">August 2025</div>
+                    <button id="nextMonth"><i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="calendar-grid" id="calendarGrid">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
